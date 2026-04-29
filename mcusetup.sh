@@ -35,10 +35,10 @@ echo -n 'Creating configuration files... '
 echo ewogICJhZGRyX2ludGVyZmFjZSI6ICIwLjAuMC4wIiwKICAiYWRkcl9tYWluIjogIjEwLjEuMS4xMTMiLAogICJhZGRyX2FsdCI6ICIzMS40NC45NC4xMTYiLAogICJhZGRyX2ludGVyZmFjZV9pcHY2IjogIiIsCiAgImFkZHJfbWFpbl9pcHY2IjogIiIsCiAgImFkZHJfYWx0X2lwdjYiOiAiIiwKICAiZnFkbiI6ICJuczEubnQtc2Vydi5jb20iLAogICJ6b25lIjogIiIsCiAgIndtcl9hY3RpdmVfdXJsIjogIiIsCiAgInNlcnZpY2VfY2hhbm5lbF9zZWNyZXQiOiAicWZUZG1iVjF4dHRvNnB0TjAxVzZ3dm9KaEFtNU0wbG13TElYdUNsQ3NvalJVeW0wNkVGUjBneENISXF4aXBobCIsCiAgImxvZ19yZW1vdGVfdXJsIjogIiIsCiAgImxvZ19zZXZlcml0eSI6ICJ3YXJuaW5nIiwKICAiYmFuZGNhcCI6IDAsCiAgInBhcnRzY2FwIjogMCwKICAibWVldGluZ3NjYXAiOiAwLAogICJvbmJvYXJkIjogdHJ1ZQp9 | base64 --decode > /opt/3cxwm/mcu/config.json
 echo ewogICJsb2dfbGV2ZWwiOiAzLAogICJsb2dfZGF5cyI6IDcsCiAgImxvZ190b19jb25zb2xlIjogZmFsc2UsCiAgImxvZ190b19maWxlIjogdHJ1ZSwKICAibG9nX3RvX3N0YWNrZHJpdmVyIjogZmFsc2UsCiAgInJlY29yZGluZ19kYXlzIjogNywKICAicG9ydCI6IDYwNDQzLAogICJ1cGxvYWRfbGltaXQiOiA3NSwKICAidXBsb2FkX3RpbWVvdXQiOiAxMDAwMCwKICAibWN1X3BhdGgiOiAiIiwKICAicGRmZ2VuZXJhdG9yX2NvbnNvbGV0aW1lb3V0IjogMzAwMDAsCiAgInVzZV9zZWN1cmVfaGFzaCI6IGZhbHNlLAogICJmaXJld2FsbF9idWZmZXJfc2Vjb25kcyI6IDMwLAogICJmaXJld2FsbF90YXJnZXRfc2NvcmUiOiAxMDAsCiAgImZpcmV3YWxsX2Jsb2NrX3NlY29uZHMiOiAzMDAsCiAgImZpcmV3YWxsX2hhY2tfbXVsdGlwbGllciI6IDEwMCwKICAiZmlyZXdhbGxfbm90Zm91bmRfbXVsdGlwbGllciI6IDUsCiAgImZpcmV3YWxsX2JhZHJlcXVlc3RfbXVsdGlwbGllciI6IDAuNwp9 | base64 --decode > /opt/3cxwm/mcumanager/config.json
 echo 'done'
-echo -n 'Downloading MCU packages... '
-until curl -O -s "https://github.com/SniperMagnus/main/raw/refs/heads/main/3cx-mcu_20.0.8.39041_amd64.deb" >> /var/lib/3cxpbx/WebMeeting/Logs/onboard-install.log ; do sleep 2; done
-until curl -O -s "https://cloud.nt-serv.com/index.php/s/nz5Szj5K93onQiR" >> /var/lib/3cxpbx/WebMeeting/Logs/onboard-install.log ; do sleep 2; done
-echo 'done'
+#echo -n 'Downloading MCU packages... '
+#until curl -O -s "https://github.com/SniperMagnus/main/raw/refs/heads/main/3cx-mcu_20.0.8.39041_amd64.deb" >> /var/lib/3cxpbx/WebMeeting/Logs/onboard-install.log ; do sleep 2; done
+#until curl -O -s "https://cloud.nt-serv.com/index.php/s/nz5Szj5K93onQiR" >> /var/lib/3cxpbx/WebMeeting/Logs/onboard-install.log ; do sleep 2; done
+#echo 'done'
 echo 'Installing MCU packages...'
 until apt-get -y --allow-downgrades install ./3cx-mcumanager_20.0.8.39041_amd64.deb >> /var/lib/3cxpbx/WebMeeting/Logs/onboard-install.log ; do sleep 2; done
 until apt-get -y --allow-downgrades install ./3cx-mcu_20.0.8.39041_amd64.deb >> /var/lib/3cxpbx/WebMeeting/Logs/onboard-install.log ; do sleep 2; done
