@@ -60,7 +60,6 @@ systemctl restart 3CXWMMcuManager
 systemctl restart 3CXWMMcu
 apt-get -y install unattended-upgrades >> /var/lib/3cxpbx/WebMeeting/Logs/onboard-install.log 2>&1
 echo 'done'
-rm *.deb 2>/dev/null
 echo 'OnBoard MCU Install Successfully Completed'
 echo
 echo Place your SSL certificate for ns1.nt-serv.com in /opt/3cxwm/cert
